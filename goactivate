@@ -1,26 +1,14 @@
-# Script to set PATH, GOPATH and shell prompt for your project. Drop this
-# script in your PATH. To activate environment, go in the root directory of
-# the project and type:
+# Script to set PATH, GOPATH and shell prompt for your project. To use it, go
+# to the root directory of the project and type:
 # 
-#   source goactivate
-# 
-# This will set PATH to:
-# 
-#   /project/home/bin:$PATH
-# 
-# And it will also set GOPATH to:
-# 
-#   /project/home
-# 
-# So that dependencies will be installed in your project home directory.
-# Furthermore, the shell prompt is modified so that it will show activated
-# project between brackets.
-# 
-# To deactivate the environment, type:
-# 
-#   deactivate
-# 
-# This will restore your previous PATH, GOPATH and shell prompt.
+#   . goactivate
+
+# Test if we run directly (instead of sourcing the file) and exit if we do
+if [[ $0 != "-bash" ]]
+then
+    echo "Don't run this script directly, instead type '. goactivate'"
+    exit 1
+fi
 
 deactivate () {
     # reset old environment variables
