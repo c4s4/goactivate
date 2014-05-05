@@ -35,8 +35,14 @@ deactivate
 
 This will restore your previous PATH, GOPATH and shell prompt.
 
+License
+-------
+
+This script is an adaptation of the activate script of the Python virtualenv project and uses its license (in LICENSE file).
+
 Releases
 --------
 
+- **0.1.1** (*2014-05-05*): Added direct run detection.
 - **0.1.0** (*2014-05-05*): First release.
 
