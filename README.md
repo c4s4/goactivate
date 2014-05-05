@@ -2,7 +2,12 @@
 GOACTIVATE
 ==========
 
-Script to set PATH, GOPATH and shell prompt for your project. Drop this script in your PATH. To activate environment, go in the root directory of the project and type:
+Script to set PATH, GOPATH and shell prompt for your project.
+
+Usage
+-----
+
+Drop this script in your PATH. To activate environment, go in the root directory of the project and type:
 
 ```shell
 source goactivate
@@ -29,4 +34,9 @@ deactivate
 ```
 
 This will restore your previous PATH, GOPATH and shell prompt.
+
+Releases
+--------
+
+- **0.1.0** (*2014-05-05*): First release.
 
