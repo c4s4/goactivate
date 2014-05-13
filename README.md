@@ -43,6 +43,7 @@ This script is an adaptation of the activate script of the Python virtualenv pro
 Releases
 --------
 
+- **0.1.2** (*2014-05-13*): Print documentation when running script directly.
 - **0.1.1** (*2014-05-05*): Added direct run detection.
 - **0.1.0** (*2014-05-05*): First release.
 
