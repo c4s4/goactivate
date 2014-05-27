@@ -22,7 +22,7 @@ This will set PATH to:
 And it will also set GOPATH to:
 
 ```shell
-/project/home
+/project/home/lib:/project/home
 ```
 
 So that dependencies will be installed in your project home directory. Furthermore, the shell prompt is modified so that it will show activated project between brackets.
@@ -43,6 +43,7 @@ This script is an adaptation of the activate script of the Python virtualenv pro
 Releases
 --------
 
+- **0.1.3** (*2014-05-27*): Added lib directory in GOPATH.
 - **0.1.2** (*2014-05-13*): Print documentation when running script directly.
 - **0.1.1** (*2014-05-05*): Added direct run detection.
 - **0.1.0** (*2014-05-05*): First release.
