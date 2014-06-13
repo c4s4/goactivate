@@ -15,7 +15,7 @@ This will set PATH to:
 
 And it will also set GOPATH to:
 
-  /project/home/lib:/project/home
+  /project/home
 
 So that dependencies will be installed in your project home directory.
 Furthermore, the shell prompt is modified so that it will show activated
@@ -74,7 +74,7 @@ PATH="$VIRTUAL_ENV/bin:$PATH"
 export PATH
 
 _OLD_VIRTUAL_GOPATH="$GOPATH"
-GOPATH="$VIRTUAL_ENV/lib:$VIRTUAL_ENV"
+GOPATH="$VIRTUAL_ENV"
 export GOPATH
 
 if [ -z "$VIRTUAL_ENV_DISABLE_PROMPT" ] ; then
@@ -99,4 +99,3 @@ fi
 if [ -n "$BASH" -o -n "$ZSH_VERSION" ] ; then
     hash -r 2>/dev/null
 fi
-
