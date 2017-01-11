@@ -1,0 +1,25 @@
+# Semantic Change Log (http://github.com/c4s4/changelog)
+
+- version: 0.2.0
+  date:    2015-03-28
+  summary: Added build file and change log.
+
+- version: 0.1.4
+  date:    2014-06-13
+  summary: Removed lib directory in GOPATH.
+
+- version: 0.1.3
+  date:    2014-05-27
+  summary: Added lib directory in GOPATH.
+
+- version: 0.1.2
+  date:    2014-05-13
+  summary: Print documentation when running script directly.
+
+- version: 0.1.1
+  date:    2014-05-05
+  summary: Added direct run detection.
+
+- version: 0.1.0
+  date:    2014-05-05
+  summary: First release.

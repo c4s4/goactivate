@@ -1,0 +1,26 @@
+default: release
+
+properties:
+  NAME:      "goactivate"
+  VERSION:   "0.3.0"
+  BUILD_DIR: "build"
+  ARC_DIR:   "#{BUILD_DIR}/#{NAME}-#{VERSION}"
+
+targets:
+
+  archive:
+    depends: clean
+    steps:
+    - mkdir: "#{ARC_DIR}"
+    - "md2pdf README.md && mv README.pdf #{ARC_DIR}/"
+    - "cp goactivate LICENSE.txt CHANGELOG.yml #{ARC_DIR}/"
+    - "cd #{BUILD_DIR} && zip -r #{NAME}-#{VERSION}.zip #{NAME}-#{VERSION}/"
+
+  release:
+    depends: archive
+    steps:
+    - "release"
+
+  clean:
+    steps:
+    - delete: "#{BUILD_DIR}"
