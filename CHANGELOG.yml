@@ -1,5 +1,9 @@
 # Semantic Change Log (http://github.com/c4s4/changelog)
 
+- version: 0.3.0
+  date:    2017-01-11
+  summary: Refactoring build and documentation.
+
 - version: 0.2.0
   date:    2015-03-28
   summary: Added build file and change log.
