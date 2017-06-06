@@ -1,26 +1,20 @@
-default: release
+# NeON build file (http://github.com/c4s4/neon)
+
+extends:
+- c4s4/build/buildir.yml
+- c4s4/build/changelog.yml
+
+default: archive
 
 properties:
   NAME:      "goactivate"
-  VERSION:   "0.3.0"
-  BUILD_DIR: "build"
-  ARC_DIR:   "#{BUILD_DIR}/#{NAME}-#{VERSION}"
 
 targets:
 
   archive:
     depends: clean
     steps:
-    - mkdir: "#{ARC_DIR}"
-    - "md2pdf README.md && mv README.pdf #{ARC_DIR}/"
-    - "cp goactivate LICENSE.txt CHANGELOG.yml #{ARC_DIR}/"
+    - mkdir: "#{BUILD_DIR}/#{NAME}-#{VERSION}"
+    - "md2pdf README.md && mv README.pdf #{BUILD_DIR}/#{NAME}-#{VERSION}/"
+    - "cp goactivate LICENSE.txt CHANGELOG.yml #{BUILD_DIR}/#{NAME}-#{VERSION}/"
     - "cd #{BUILD_DIR} && zip -r #{NAME}-#{VERSION}.zip #{NAME}-#{VERSION}/"
-
-  release:
-    depends: archive
-    steps:
-    - "release"
-
-  clean:
-    steps:
-    - delete: "#{BUILD_DIR}"
