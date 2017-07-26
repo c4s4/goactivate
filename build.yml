@@ -2,7 +2,7 @@
 
 extends:
 - c4s4/build/buildir.yml
-- c4s4/build/changelog.yml
+- c4s4/build/release.yml
 
 default: archive
 
@@ -14,7 +14,8 @@ targets:
   archive:
     depends: clean
     steps:
-    - mkdir: "#{BUILD_DIR}/#{NAME}-#{VERSION}"
-    - "md2pdf README.md && mv README.pdf #{BUILD_DIR}/#{NAME}-#{VERSION}/"
-    - "cp goactivate LICENSE.txt CHANGELOG.yml #{BUILD_DIR}/#{NAME}-#{VERSION}/"
-    - "cd #{BUILD_DIR} && zip -r #{NAME}-#{VERSION}.zip #{NAME}-#{VERSION}/"
+    - mkdir: "#{BUILD_DIR}"
+    - tar:     '*'
+      exclude: ['build.yml', '#{BUILD_DIR}/**/*', '.*']
+      prefix:  '#{NAME}'
+      tofile:  '#{BUILD_DIR}/#{NAME}-#{VERSION}.tar.gz'
