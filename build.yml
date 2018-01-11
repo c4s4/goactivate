@@ -7,15 +7,15 @@ extends:
 default: archive
 
 properties:
-  NAME:      "goactivate"
+  NAME: 'goactivate'
 
 targets:
 
   archive:
     depends: clean
     steps:
-    - mkdir: "#{BUILD_DIR}"
+    - mkdir: =BUILD_DIR
     - tar:     '*'
-      exclude: ['build.yml', '#{BUILD_DIR}/**/*', '.*']
-      prefix:  '#{NAME}'
-      tofile:  '#{BUILD_DIR}/#{NAME}-#{VERSION}.tar.gz'
+      exclude: ['build.yml', '={BUILD_DIR}/**/*', '.*']
+      prefix:  =NAME
+      tofile:  '={BUILD_DIR}/={NAME}-={VERSION}.tar.gz'
